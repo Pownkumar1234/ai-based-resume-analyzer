@@ -1,0 +1,185 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* Root Variables - High Contrast Obsidian/Neon Theme */
+:root {
+    /* Backgrounds */
+    --bg-darker: #050505;
+    /* Deepest Black */
+    --bg-dark: #101010;
+    /* Dark Grey */
+    --bg-light: #1A1A1A;
+    /* Lighter Grey for inputs/cards */
+
+    /* Text */
+    --text-primary: #FFFFFF;
+    /* Pure White */
+    --text-secondary: #E0E0E0;
+    /* Bright Grey */
+    --text-muted: #B0B0B0;
+    /* Muted Grey */
+
+    /* Accents - Neon */
+    --primary-gradient: linear-gradient(135deg, #00FF9D 0%, #00E5FF 100%);
+    /* Neon Green to Cyan */
+    --accent-color: #00FF9D;
+    /* Neon Green */
+    --accent-color-hover: #00CC7D;
+    --accent-secondary: #00E5FF;
+    /* Cyan */
+
+    /* Status */
+    --success-color: #00FF00;
+    /* Bright Green */
+    --warning-color: #FFD700;
+    /* Gold */
+    --error-color: #FF3333;
+    /* Bright Red */
+
+    /* Boarders */
+    --border-color: #333333;
+    --glass-border: rgba(255, 255, 255, 0.2);
+
+    /* Cards */
+    --card-bg: #151515;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 500;
+    /* Increased weight */
+}
+
+.stApp {
+    background: var(--bg-darker);
+}
+
+/* Main container */
+.main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-primary) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+}
+
+/* Cards */
+.stCard,
+.card,
+.feature-card,
+.metric-card,
+.feedback-card,
+.template-card {
+    background: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Inputs */
+.stTextInput>div>div,
+.stTextArea>div>div,
+.stSelectbox>div>div {
+    background-color: var(--bg-light) !important;
+    border: 2px solid var(--border-color) !important;
+    /* Thicker border */
+    color: var(--text-primary) !important;
+    border-radius: 8px;
+}
+
+.stTextInput input,
+.stTextArea textarea {
+    color: var(--text-primary) !important;
+    font-weight: 500;
+}
+
+/* Buttons */
+.stButton>button {
+    background: var(--primary-gradient) !important;
+    color: #000000 !important;
+    /* Black text on neon background for contrast */
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+}
+
+/* Sidebar */
+.css-1d391kg,
+[data-testid="stSidebar"] {
+    background-color: var(--bg-dark) !important;
+    border-right: 1px solid var(--border-color);
+}
+
+/* Links */
+a {
+    color: var(--accent-secondary) !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Metrics */
+[data-testid="stMetricValue"] {
+    color: var(--accent-color) !important;
+    font-weight: 700 !important;
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+}
